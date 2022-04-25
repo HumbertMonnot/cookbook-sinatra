@@ -1,0 +1,11 @@
+<% @recipes.each_with_index do |recipe, index| %>
+  <li>
+    <form action="/import_kw" method="get">
+    <%= recipe.name %>
+    <%= recipe.description%>
+    <input type="hidden" name = "name" value="<%=recipe.name%>">
+    <input type="hidden" name = "description" value="<%=recipe.description%>">
+    <input type="submit" value="Take this one!">
+    </form>
+  </li>
+<% end %>

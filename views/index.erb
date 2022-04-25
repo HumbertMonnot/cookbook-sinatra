@@ -1,0 +1,14 @@
+<% @recipes.each_with_index do |recipe, index| %>
+  <li>
+    <form action="destroy" method="get">
+    <%= recipe.name %>
+    <%= recipe.description%>
+    <input type="hidden" name = "index" value="<%=index%>">
+    <input type="submit" value="Delete!">
+    </form>
+  </li>
+<% end %>
+<p></p>
+<a href = "/new">CREATE RECIPE</a>
+<p></p>
+<a href = "/import">IMPORT RECIPE</a>
